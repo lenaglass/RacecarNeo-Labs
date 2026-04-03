@@ -1,20 +1,19 @@
-## MIT RacerNeo Simulation+Labs Environment
+## MIT RacerNeo Labs Environment
 
-This is an abbreviated version of the full setup using anaconda (vs virtualenv)
+This is an abbreviated version of the full MIT Beaver Works setup but using anaconda (vs virtualenv)
 and supporting only simulation (not an actual racecar).
 
-- Controller mappings are adjusted for a Playstation 5 Dualshock Controller
-- Haptics are supported if connected via USB (not Blutetooth).
+There are some changes to the Unity based Simulator:
 
-Includes the following additions to the upstream:
-
-- Default limiter set to full speed (1.0 ~= 4m/s)
+- Default limiter is set to full speed (1.0 ~= 4m/s)
+- Controller mappings are for PS5 Dualshock
+- Haptics are supported (USB controller connection only)
 - Power-law based throttle & steering response
 - Adaptive (speed sensitive) steering
 - Chase-cam controls on right joystick / cursor keys
 - Adaptive lighting, HDR and bloom effects
 - Tron Mode (X button)
-- Hud toggle (Y botton)
+- HUD toggle (Y botton)
 
 ### Prerequisites
 
@@ -29,11 +28,11 @@ When first opening a C# file, VS Code will prompt to install additional extensio
 
 ### Repositories
 
-The simulator is based on a Unity project. It accepts connections from the labs on a special UDP port, returning simulated camera, lidar, and IMU data.
+The simulator is a Unity project. This accepts connections from the labs on a special UDP port, returning simulated camera, lidar, and IMU data to the labs (python scripts).
 
 - Simulator: https://github.com/lenaglass/RacecarNeo-Simulator
 
-The labs are Jupyter notebooks plus python scripts.
+The labs include Jupyter notebooks a and Python scripts.
 
 - Labs: https://github.com/lenaglass/RacecarNeo-Labs
 
